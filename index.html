@@ -39,6 +39,10 @@
       font-size: 2.5rem;
       line-height: 1;
     }
+    h3 {
+      font-size: 2rem;
+      line-height: 1;
+    }
     p {
       line-height: 1.8;
     }
@@ -47,6 +51,9 @@
     }
     .text-primary {
       color: var(--primary);
+    }
+    .text-primary-dark {
+      color: var(--primary-dark);
     }
     .text-secondary {
       color: var(--secondary);
@@ -64,24 +71,50 @@
       text-align: center;
     }
     .container {
-      max-width: calc(100vw - 8rem);
-      width: 100%;
+      max-width: 1280px;
       margin: 0 auto;
     }
     .right-side-box {
-      margin-left: 4rem;
-      padding: 2rem 4rem;
+      margin-left: calc( (100vw - 1280px) / 2 );
+      padding: 2rem;
+      padding-right: calc( (100vw - 1280px) / 2 );
+    }
+    .right-side-inner {
+      max-width: calc(1280px - 4rem);
+      margin-right: calc( (100vw - 1280px) / 2 );
     }
     .grid-4-col {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 2rem;
     }
-    .box-border {
+    .grid-3-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      color: var(--primary);
+      border-radius: 12px;
+      box-shadow: 5px 5px 0 var(--primary-dark);
+      padding: 1rem;
+    }
+    .box-border-secondary-light {
       box-shadow: 10px 10px 0 var(--secondary-light);
     }
+    .box-border-primary-light {
+      box-shadow: 10px 10px 0 var(--primary-light);
+    }
     .align-end {
+      display: grid;
+      grid-template-columns: 1fr; 
+    }
+    .align-end * {
       align-self: end;
+      justify-self: center;     
+      margin: 0;
+      line-height: 1.5;
     }
     .box-pad-sm {
       padding: 1.5rem;
@@ -89,8 +122,12 @@
     .box-pad-lg {
       padding: 4rem 0;
     }
+    .box-pad-sm {
+      padding: 1rem;
+    }
     .full-width {
       width: 100%;
+      position: relative;
     }
     .bg-primary {
       background: var(--primary);
@@ -104,42 +141,112 @@
     .bg-secondary-light {
       background: var(--secondary-light);
     }
-    .x-list {
-      list-style-image: url(images/x-icon.png);
-      list-style-position: outside;
+    .list {
+      margin-top: 2rem;
     }
-    .x-list li {
-      color: var(--primary-dark);
+    .list li {
       font-size: 1.2rem;
       margin-bottom: 1.5rem; 
       line-height: 1;
       font-style: italic;
       margin-top: -3px;
     }
-    .x-list li:last-child {
+    .list li:last-child {
       margin-bottom: 0;
     }
-    
+    .x-list {
+      list-style-position: outside;
+      list-style-image: url(images/x-icon.png);
+    }
+    .ellipsis-list {
+      list-style-position: inside;
+      list-style-type: "\2026";
+    }
+    .border-bottom-secondary {
+      border-bottom: 1px solid var(--secondary);
+      padding-bottom: 1rem;
+    }
+    a.btn {
+      display: block;
+      font-size: 1.8rem;
+      padding: .8rem 2rem;
+      text-align: center;
+      width: max-content;
+      text-decoration: none;
+      margin: 2rem auto 0;
+    }
+    .btn-secondary {
+      background: var(--secondary);
+      color: #fff;
+    }
+    .btn-secondary:hover {
+      background: var(--primary); 
+    }
+    .btn-outline-secondary-light {
+      border: 2px solid var(--secondary-light);
+      color: var(--secondary-light);
+      background: transparent;
+    }
+    .btn-outline-secondary-light:hover {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .profile-img {
+      float: right;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+      width: 250px;
+      height: 250px;
+    }
+    @media (max-width: 1279px) {
+      .container {
+        max-width: calc(100vw - 8rem);
+        padding: 4rem;
+      }
+      .right-side-box {
+        max-width: calc(100% - 4rem);
+        margin-left: 4rem;
+        padding: 2rem 4rem;
+        padding-right: 4rem;
+      }
+    }
     @media (max-width: 1024px) {
-      .grid-4-col {
+      .grid-4-col, .grid-3-col {
         grid-template-columns: 1fr 1fr;
       }
     }
 
     @media (max-width: 767px) {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
       .container {
-        max-width: 100vw;
-        padding: 0 2rem;
+        max-width: calc(100vw - 4rem);
+        padding: 2rem;
       }
       .right-side-box {
         margin-left: 2rem;
         padding: 2rem;
       }
-      .grid-4-col {
+      .grid-4-col, .grid-3-col {
         grid-template-columns: 1fr;
       }
       .box-pad-lg {
         padding: 2rem 0;
+      }
+      .profile-img {
+        display: block;
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
       }
     }
 
@@ -159,16 +266,115 @@
 
     <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
   </div>
-  <div class="right-side-box box-border bg-secondary text-white">
-    <h2 class="uppercase"><span class="text-bold">Fortunately, </span>There's a better solution </h2>
+  <div class="full-width">
+    <div class="right-side-box box-border-secondary-light bg-secondary text-white">
+      <div cass="right-side-inner">
+        <h2 class="uppercase"><span class="text-bold">Fortunately, </span>There's a better solution </h2>
+        <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+    
+        <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+        <ul class="list x-list text-primary-dark">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container box-pad-lg">
+    <img class="profile-img" src="images/daniel-krause.png" alt="Daniel J. Krause">
+    <h2 class="text-primary border-bottom-secondary">Why I Help People with Asset Protection</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet non curabitur gravida arcu. Quam nulla porttitor massa id. Vestibulum lorem sed risus ultricies. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Aliquet porttitor lacus luctus accumsan tortor posuere. Mauris commodo quis imperdiet massa tincidunt. Dui faucibus in ornare quam. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Scelerisque eu ultrices vitae auctor eu augue. Velit ut tortor pretium viverra suspendisse potenti nullam. Nunc pulvinar sapien et ligula ullamcorper. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet consectetur adipiscing elit ut. Justo donec enim diam vulputate ut pharetra sit amet. Ac auctor augue mauris augue. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Viverra suspendisse potenti nullam ac tortor. Eget mauris pharetra et ultrices.</p>
 
     <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
-    <ul class="x-list">
-      <li>No more worrying about your money flying out of your bank account...</li>
-      <li>No more losing sleep at the prospect of having no financial security...</li>
-      <li>And no more nagging feeling that your children will be left with no inheritance.</li>
-    </ul>
+    <h2 class="text-primary text-bold uppercase text-center">With the Krause Medicaid Process, You'll Get:</h2>
+    <div class="grid-4-col">
+      <div class="bg-primary-dark text-white box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet. Nisl pretium fusce id velit ut tortor.</p>
+      </div>
+      <div class="bg-primary text-white box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="bg-secondary text-white box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="bg-secondary-light text-primary box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="bg-secondary-light text-primary box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="bg-secondary text-white box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="bg-primary text-white box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="bg-primary-dark text-white box-pad-sm align-end">
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
   </div>
+
+  <div class="full-width bg-primary text-white">
+    <div class="container box-pad-lg">
+      <h2 class="border-bottom-secondary">But don't just take my word for it.<br>
+        Read what our clients have to say:
+      </h2>
+      <div class="grid-3-col">
+        <div class="card">
+          <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium.</p>
+          <p class="uppercase text-primary text-bold">Client Name</p>
+        </div>
+        <div class="card">
+          <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium.</p>
+          <p class="uppercase text-secondary text-bold">Client Name</p>
+        </div>
+        <div class="card">
+          <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium.</p>
+          <p class="uppercase text-primary-dark text-bold">Client Name</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container box-pad-lg">
+    <h2 class="text-primary border-bottom-secondary">Medicaid Asset Preservation Offer</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet non curabitur gravida arcu. Quam nulla porttitor massa id. Vestibulum lorem sed risus ultricies. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Aliquet porttitor lacus luctus accumsan tortor posuere. Mauris commodo quis imperdiet massa tincidunt. Dui faucibus in ornare quam. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Scelerisque eu ultrices vitae auctor eu augue. Velit ut tortor pretium viverra suspendisse potenti nullam. Nunc pulvinar sapien et ligula ullamcorper. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet consectetur adipiscing elit ut. Justo donec enim diam vulputate ut pharetra sit amet. Ac auctor augue mauris augue. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Viverra suspendisse potenti nullam ac tortor. Eget mauris pharetra et ultrices.</p>
+
+    <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+    <h3 class="text-secondary">Comprehensive Estate Plan</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet non curabitur gravida arcu. Quam nulla porttitor massa id. Vestibulum lorem sed risus ultricies. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Aliquet porttitor lacus luctus accumsan tortor posuere. Mauris commodo quis imperdiet massa tincidunt. Dui faucibus in ornare quam. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Scelerisque eu ultrices vitae auctor eu augue. Velit ut tortor pretium viverra suspendisse potenti nullam. Nunc pulvinar sapien et ligula ullamcorper. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet consectetur adipiscing elit ut. Justo donec enim diam vulputate ut pharetra sit amet. Ac auctor augue mauris augue. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Viverra suspendisse potenti nullam ac tortor. Eget mauris pharetra et ultrices.</p>
+
+    <a class="btn btn-secondary" href="https://www.estateplanningpeople.com/contact-us/" target="_blank" rel="noreferrer noopener">Contact Us Today &#8594;</a>
+  </div>
+
+
+  <div class="full-width">
+    <div class="right-side-box box-border-primary-light bg-primary text-white">
+      <div cass="right-side-inner">
+        <h2 class="uppercase"><span class="text-bold">Don't Wait, </span><span class="text-secondary-light">Act Now!</span></h2>
+        <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+    
+        <ul class="list ellipsis-list text-white">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        </ul>
+        <a class="btn btn-outline-secondary-light" href="https://www.estateplanningpeople.com/contact-us/" target="_blank" rel="noreferrer noopener">Contact Us Today &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-primary">
+    <div style="padding: 0 2rem;">
+      <p class="text-bold">Sincerely,</p>
+      <p>Dan Krause, Author and Attorney<br>
+        Founder of Krause Estate Planning & Elder Law Center, a Friendly Law Firm LLC organization
+      </p>
+      <p class="text-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+  </div>
+
 </body>
 </html>
