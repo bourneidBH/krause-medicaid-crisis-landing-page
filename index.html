@@ -49,6 +49,9 @@
     .text-bold {
       font-weight: 700;
     }
+    .text-medium {
+      font-weight: 500;
+    }
     .text-primary {
       color: var(--primary);
     }
@@ -198,6 +201,35 @@
       width: 250px;
       height: 250px;
     }
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    footer .flex-row div:not(.social-logos) {
+      padding: 1rem;
+    }
+    footer .flex-row p {
+      text-align: center;
+    }
+    footer a {
+      text-decoration: none;
+      color: var(--primary-light);
+    }
+    footer a:hover {
+      color: #fff;
+    }
+    .social-logos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .social-logos img {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+    }
     @media (max-width: 1279px) {
       .container {
         max-width: calc(100vw - 8rem);
@@ -213,6 +245,9 @@
     @media (max-width: 1024px) {
       .grid-4-col, .grid-3-col {
         grid-template-columns: 1fr 1fr;
+      }
+      .flex-row {
+        justify-content: center;
       }
     }
 
@@ -248,6 +283,9 @@
         margin-right: auto;
         text-align: center;
       }
+      .flex-row {
+        flex-direction: column;
+      }
     }
 
   </style>
@@ -262,21 +300,26 @@
     </div>
   </section>
   <section class="container box-pad-lg">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet non curabitur gravida arcu. Quam nulla porttitor massa id. Vestibulum lorem sed risus ultricies. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Aliquet porttitor lacus luctus accumsan tortor posuere. Mauris commodo quis imperdiet massa tincidunt. Dui faucibus in ornare quam. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Scelerisque eu ultrices vitae auctor eu augue. Velit ut tortor pretium viverra suspendisse potenti nullam. Nunc pulvinar sapien et ligula ullamcorper. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet consectetur adipiscing elit ut. Justo donec enim diam vulputate ut pharetra sit amet. Ac auctor augue mauris augue. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Viverra suspendisse potenti nullam ac tortor. Eget mauris pharetra et ultrices.</p>
+    <p>There's nothing worse than losing your family's financial security in the autumn of life because of  long term care costs. You just helplessly watch as your life savings and your retirement accounts are  drained month after month as your costs of care go up and up. You realize that you will soon have  nothing to fall back on, no security. You think about how you will not be able to leave anything for  your kids.</p>
 
-    <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+    <p>You start thinking, <strong>“But legal planning is expensive, and I don't like attorneys.”</strong> </p>
+
+    <p>Of course, you could always come up with your own plan to navigate the complicated and punitive  Medicaid regulations...</p>
+
+    <p>... if you've got lots of legal knowledge or plenty of time to read several books on Medicaid, VA  Planning and Elder Planning.</p>
   </section>
   <section class="full-width">
     <div class="right-side-box box-border-secondary-light bg-secondary text-white">
       <div cass="right-side-inner">
         <h2 class="uppercase"><span class="text-bold">Fortunately, </span>There's a better solution </h2>
-        <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
-    
-        <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+        <p>I'm Dan Krause, and I'd like to introduce you to my plan for preserving your life savings, The Krause Medicaid Process.</p> 
+
+        <p>With The Krause Medicaid Process, you can protect yourself and your family from the  financial ravages of long term care. Simply click the button, fill out a contact form  and we will reach out to begin helping your family.</p>
+
         <ul class="list x-list text-primary-dark">
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <li>No more worrying about your money flying out of your bank account...</li>
+          <li>No more losing sleep at the prospect of having no financial security... </li>
+          <li>And no more nagging feeling that your children will be left with no inheritance.</li>
         </ul>
       </div>
     </div>
@@ -284,36 +327,46 @@
   <section class="container box-pad-lg">
     <img class="profile-img" src="images/daniel-krause.png" alt="Daniel J. Krause">
     <h2 class="text-primary border-bottom-secondary">Why I Help People with Asset Protection</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet non curabitur gravida arcu. Quam nulla porttitor massa id. Vestibulum lorem sed risus ultricies. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Aliquet porttitor lacus luctus accumsan tortor posuere. Mauris commodo quis imperdiet massa tincidunt. Dui faucibus in ornare quam. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Scelerisque eu ultrices vitae auctor eu augue. Velit ut tortor pretium viverra suspendisse potenti nullam. Nunc pulvinar sapien et ligula ullamcorper. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet consectetur adipiscing elit ut. Justo donec enim diam vulputate ut pharetra sit amet. Ac auctor augue mauris augue. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Viverra suspendisse potenti nullam ac tortor. Eget mauris pharetra et ultrices.</p>
+    <p>My grandparents worked hard all their lives and never spent much money.  
+      I saw how easily everything could be lost. Even as an attorney, I was  
+      unsure how to help them preserve their money in their twilight years.  
+      Since my grandparents passed, I set about learning the mysteries of  
+      elder law and specifically the Medicaid laws and regulations.
+    </p>
 
-    <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+    <p>I have read books, articles and attended many days of training and seminars, and have handled many cases to become one of the few attorneys who practice Elder Law /Medicaid /VA Pension Planning. It is a highly regulated and complex area of the law, with many potential pitfalls.</p>
+
+    <p>In the last 10 years, I have helped many families in getting their nursing or assisted living paid for through  Medicaid while legally keeping their assets in the family. It is what I would do for my own family, so it is what I am happy to do for my clients.</p>
+
     <h2 class="text-primary text-bold uppercase text-center">With the Krause Medicaid Process, You'll Get:</h2>
     <div class="grid-4-col">
       <div class="bg-primary-dark text-white box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet. Nisl pretium fusce id velit ut tortor.</p>
+        <p>Peace of mind knowing you are doing financially what you can for  yourself and family</p>
       </div>
       <div class="bg-primary text-white box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>A comprehensive evaluation of your assets and a customized spreadsheet for purposes of planning</p>
       </div>
       <div class="bg-secondary text-white box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>A relationship with professional Estate Planning team that you and
+          your family can rely on throughout the years</p>
       </div>
       <div class="bg-secondary-light text-primary box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Leveraging government programs to maximize the assets available for the care of you andyour loved ones</p>
       </div>
       <div class="bg-secondary-light text-primary box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Access to a dedicated team of subject-matter experts</p>
       </div>
       <div class="bg-secondary text-white box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>A specific plan with a professional guide to see it is executed</p>
       </div>
       <div class="bg-primary text-white box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Financial security allowing dignity as you age</p>
       </div>
-      <div class="bg-primary-dark text-white box-pad-sm align-end">
-        <p>Lorem ipsum dolor sit amet</p>
+      <div class="bg-primary-dark text-white box-pad-sm" style="align-self: center; text-align: center;">
+        <img src="images/tree.png" alt="" width="105px" height="105px">
       </div>
     </div>
+    <p>I guess you could say that The Krause Medicaid Process is like having a  steadfast family friend who helps you do what is best for your family...  <em>Minus having them rummage through your fridge whenever they come over!</em></p>
   </section>
 
   <section class="full-width bg-primary text-white">
@@ -323,16 +376,16 @@
       </h2>
       <div class="grid-3-col">
         <div class="card">
-          <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium.</p>
-          <p class="uppercase text-primary text-bold">Client Name</p>
+          <p>Amy says the money we helped her mother save (instead of paying for nursing care) helped save her brother's life by allowing him to retire from his workplace that was making him sick.</p>
+          <!-- <p class="uppercase text-primary text-bold">Amy</p> -->
         </div>
         <div class="card">
-          <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium.</p>
-          <p class="uppercase text-secondary text-bold">Client Name</p>
+          <p>Personable, professional and thorough. Dan and his amazingly detailed staff made what I had expected would be a tedious and arduous task very pleasant. I would highly recommend this firm to anyone who is looking to get their estate planning affairs in order.</p>
+          <p class="uppercase text-secondary text-bold">George</p>
         </div>
         <div class="card">
-          <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium.</p>
-          <p class="uppercase text-primary-dark text-bold">Client Name</p>
+          <p>In late 2019 my wife entered an assisted living facility due to dementia. I was paying the entire fee for this service and it was very expensive. My financial advisor suggested I should engage with a lawyer to protect our assets... Dan (Krause) outlined a process that he has had extensive experience with wherein our assets would be protected....  In less than 6 months I will save all of the fee I paid Dan in the saving from having my spouse be on Medicaid. I strongly recommend Dan Krause.</p>
+          <p class="uppercase text-primary-dark text-bold">Joe</p>
         </div>
       </div>
     </div>
@@ -340,11 +393,30 @@
 
   <section class="container box-pad-lg">
     <h2 class="text-primary border-bottom-secondary">Medicaid Asset Preservation Offer</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet non curabitur gravida arcu. Quam nulla porttitor massa id. Vestibulum lorem sed risus ultricies. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Aliquet porttitor lacus luctus accumsan tortor posuere. Mauris commodo quis imperdiet massa tincidunt. Dui faucibus in ornare quam. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Scelerisque eu ultrices vitae auctor eu augue. Velit ut tortor pretium viverra suspendisse potenti nullam. Nunc pulvinar sapien et ligula ullamcorper. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet consectetur adipiscing elit ut. Justo donec enim diam vulputate ut pharetra sit amet. Ac auctor augue mauris augue. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Viverra suspendisse potenti nullam ac tortor. Eget mauris pharetra et ultrices.</p>
+    <p>By now, you're probably wondering how much The Krause Medicaid Process costs. Before I answer that, let me ask you a question. <em class="text-medium">How much would you spend to...</em></p>
+      
+      <p>Keep from losing all of your assets while receiving assisted living or nursing care?</p>
+      
+      <p>Be guided through the asset protection and Medicaid application process by caring professionals?</p>
+      
+      <p>Have a friend in the legal community that your family can rely on?</p>
+      
+      <p>Get all of these services from a firm owned by an Army JAG veteran?</p>
+      
+      <p><em class="text-medium">The Krause Medicaid Process gives you all that and more.</em></p>
+      
+      <p>
+        If you had to pay out of pocket for your care, you could expect to spend <em class="text-medium">$600,000 </em>or more. I'm making The Krause Medicaid Process available for a fraction of that. <em class="text-medium">It costs just about what you would pay for two months of nursing care.</em>
+      </p>
+      
+      <p><strong>But that's not all. Act today, and I'll also include:</strong></p>
 
-    <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
     <h3 class="text-secondary">Comprehensive Estate Plan</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet non curabitur gravida arcu. Quam nulla porttitor massa id. Vestibulum lorem sed risus ultricies. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Aliquet porttitor lacus luctus accumsan tortor posuere. Mauris commodo quis imperdiet massa tincidunt. Dui faucibus in ornare quam. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Scelerisque eu ultrices vitae auctor eu augue. Velit ut tortor pretium viverra suspendisse potenti nullam. Nunc pulvinar sapien et ligula ullamcorper. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet consectetur adipiscing elit ut. Justo donec enim diam vulputate ut pharetra sit amet. Ac auctor augue mauris augue. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Viverra suspendisse potenti nullam ac tortor. Eget mauris pharetra et ultrices.</p>
+    <p>For every person or married couple who takes advantage of this offer in the next 30 days, we will include a  comprehensive estate plan for them.</p>
+
+    <p>Last Will and Testament, Power of Attorney for Finance, Health Care Power of Attorney, Living Will, and  ancillary documents designed for you and customized for your family’s needs.</p>
+
+    <p>Because we want to give people the same advantages we would give our family members, I'm offering it at  a value price we cannot disclose in this format. However, there are only a limited number of cases we can  take each month because of the work involved and the difficulty of finding attorneys skilled in this area  of the law. You're going to want to contact us now so you can save you and your family the maximum  amount possible... <strong>set a consultation today to see how we can help protect your security NOW!</strong></p>
 
     <a class="btn btn-secondary" href="https://www.estateplanningpeople.com/contact-us/" target="_blank" rel="noreferrer noopener">Contact Us Today &#8594;</a>
   </section>
@@ -353,27 +425,81 @@
     <div class="right-side-box box-border-primary-light bg-primary text-white">
       <div cass="right-side-inner">
         <h2 class="uppercase"><span class="text-bold">Don't Wait, </span><span class="text-secondary-light">Act Now!</span></h2>
-        <p>Nisl pretium fusce id velit ut tortor. Elementum tempus egestas sed sed risus pretium. Eu ultrices vitae auctor eu. Non sodales neque sodales ut etiam sit amet. Ultricies integer quis auctor elit sed. Risus nullam eget felis eget. Et egestas quis ipsum suspendisse. Maecenas ultricies mi eget mauris pharetra. Ipsum dolor sit amet consectetur adipiscing elit. Tempor nec feugiat nisl pretium. Diam vel quam elementum pulvinar etiam non quam lacus.</p>
+        <p><em>Set a consultation today to see how we can help protect your security and say goodbye to...</em></p>
     
         <ul class="list ellipsis-list text-white">
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <li>worrying about losing everything to the astronomical cost of nursing care</li>
+          <li>not knowing where to turn for advice</li>
+          <li>hours of confusing internet research into asset protection options</li>
+          <li>wondering what the nursing homes and assisted living facilities aren't telling you</li>
         </ul>
+
+        <p>With The Krause Medicaid Process, you can put these things behind you and put your family on a road to greater financial security. Just click the button below to let us treat you like family.</p>
         <a class="btn btn-outline-secondary-light" href="https://www.estateplanningpeople.com/contact-us/" target="_blank" rel="noreferrer noopener">Contact Us Today &#8594;</a>
       </div>
     </div>
   </section>
 
-  <section class="container text-primary">
+  <section class="container text-primary box-pad-lg">
     <div style="padding: 0 2rem;">
       <p class="text-bold">Sincerely,</p>
       <p>Dan Krause, Author and Attorney<br>
         Founder of Krause Estate Planning & Elder Law Center, a Friendly Law Firm LLC organization
       </p>
-      <p class="text-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <p class="text-bold">** Remember, the earlier you act, the more you are likely to preserve. Each month of delay can be another $12,000 wasted. Even if you have been in a nursing facility for months or years, you still may be able to save most of what you have left. **</p>
     </div>
   </section>
+  <footer class="bg-primary text-white">
+    <div class="container">
+      <div class="flex-row">
+        <div>
+          <p>
+            15850 W Bluemound Rd.<br>
+            Suite 314<br>
+            Brookfield, WI 53005<br>
+            <a href="tel:+14144209185">(414) 420-9185</a><br>
+            <a href="https://www.google.com/maps/place/15850+W+Bluemound+Rd+Suite+314,+Brookfield,+WI+53005/@43.0366366,-88.1098549,17z/data=!3m1!4b1" target="_blank" rel="noopener noreferrer">[Map &amp; Directions]</a>
+          </p>
+        </div>
 
+        <div>
+          <p>
+            313 Price Place<br>
+            Suite 207<br>
+            Madison, WI 53705<br>
+            <a href="tel:+16083445491">(608) 344-5491</a><br>
+            <a href="https://www.google.com/maps?cid=9376587142817920213" target="_blank" rel="noopener noreferrer">[Map &amp; Directions]</a>
+          </p>
+        </div>
+
+        <div>
+          <p>
+            116 Spring St<br>
+            Oregon, WI 53575<br>
+            <a href="tel:+16086403439">(608) 640-3439</a><br>
+            <a href="https://www.google.com/maps?cid=3468344266504034823" target="_blank" rel="noopener noreferrer">[Map &amp; Directions]</a>
+          </p>
+        </div>
+
+        <div>
+          <p class="uppercase text-bold">Follow us on social media</p>
+          <div class="social-logos">
+            <a href="https://www.facebook.com/friendlylawfirm" target="_blank" rel="noopener noreferrer"><img src="images/facebook.png" alt="Facebook" width="30px" height="30px"></a>
+
+            <a href="https://www.linkedin.com/company/krause-estate-planning-elder-law-center/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin-icon-1-logo-png-transparent.png" alt="LinkedIn" width="30px" height="30px"></a>
+
+            <a href="https://youtube.com/@krauseestateplanningelderl913?si=L9CvCGeI1Iz4xQ08" target="_blank" rel="noopener noreferrer"><img src="images/Youtube-logo-vector-PNG.png" alt="YouTube" width="30px" height="30px"></a>
+          </div>
+        </div>
+
+        <div>
+          <a href="https://www.estateplanningpeople.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/krause-logo-white.png" alt="Krause Estate Planning logo" width="200px" height="48px"  style="padding-top: 1rem;">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
